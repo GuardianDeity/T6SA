@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: azure;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-align: center; /* Centrar contenido del body */
+}
+
+.greetings {
+    font-size: 6rem;
+    font-weight: 100;
+    text-align: center; /* Centra el texto del div */
+    margin-bottom: 20px;
+}
+
+.greetings > span {
+    animation: glow 2.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description span {
+    width: 100%;
+    text-align: center;
+}
+
+.botones {
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a {
+    background-color: #eebbbb;
+    padding: 9px;
+    border-radius: 80px;
+    display: inline-block;
+    text-decoration: none;
+    color: #111;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botones a:hover {
+    background-color: #eebbbb;
+    transform: scale(1.05);
+}
+
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 12px #eebbbb, 0 0 50px #eebbbb, 0 0 100px #eebbbb;
+    }
+    50% {
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+img {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .greetings {
+        font-size: 2rem;
+    }
+
+    .botones a {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .greetings {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .botones a {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}
